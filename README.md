@@ -1,6 +1,6 @@
 # GTAOnline-RCE
-#### Array Overflow Read/Write within Rage Script
-In 2019 I discovered this exploit within GTA V's multiplayer scripting code and wanted to document how it worked and provide the source code for it. This document will explain the process of how it is set up and executed with code snippets. The full code can be found within the source release of [Paradise SPRX](https://github.com/gopro2027/)
+#### Array Overflow Read/Write within Rage Script On PS3
+On PS3, In 2019 I discovered this exploit within GTA V's multiplayer scripting code and wanted to document how it worked and provide the source code for it. This document will explain the process of how it is set up and executed with code snippets. The full code can be found within the source release of [Paradise SPRX](https://github.com/gopro2027/)
 
 #### Overview
 The exploit is not a full RCE, it provides read and write access to the normal memory area of the game. This may be a prereq to a full code execution in powerpc, but it can be used to inject code into the scripts of GTA V and that is what I used it for.
