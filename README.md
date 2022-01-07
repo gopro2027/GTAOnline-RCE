@@ -4,6 +4,7 @@ On PS3, In 2019 I discovered this exploit within GTA V's multiplayer scripting c
 
 #### Overview
 The exploit is not a full RCE, it provides read and write access to the normal memory area of the game. This may be a prereq to a full code execution in powerpc, but it can be used to inject code into the scripts of GTA V and that is what I used it for.
+
 The way it functions is by modifying the array size of shared array structures used by [NETWORK::NETWORK_REGISTER_HOST_BROADCAST_VARIABLES](http://dev-c.com/nativedb/func/info/3e9b2f01c50df595). Arrays in Rage Script are of size `1 + array_size` in ints where the first index is the size of the array. An oversight with `NETWORK_REGISTER_HOST_BROADCAST_VARIABLES` will sync the array size of synced arrays with the clients, allowing you to set the size of certain arrays to INT_MAX on your system and other client's systems. Combining this with carefully treated [SCRIPT::TRIGGER_SCRIPT_EVENT](http://dev-c.com/nativedb/func/info/5ae99c571d5bbe5d) functions, you can access out of bounds areas on a remote client's system with the now large array size.
 
 #### Steps
