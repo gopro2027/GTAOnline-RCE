@@ -18,6 +18,9 @@ The way it functions is by modifying the array size of shared array structures u
 
 I have included the rce.h file which includes nearly all of the code relating to this topic. It is a direct copy of the one from the [Paradise SPRX](https://github.com/gopro2027/ParadiseSPRX) source code. All of the rest of the code you may need can be found there.
 
+#### See Also
+Here is a tweet of when I originally discovered this via [twitter](https://twitter.com/gopro_2027/status/1118170209511198727)
+
 Thank you!
 
 RIP GTA Online PS3
